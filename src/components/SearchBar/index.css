@@ -1,0 +1,139 @@
+.search-bar {
+  max-width: 25rem;
+  margin: auto;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px var(--color-cod-grey);
+}
+
+.airline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.7rem;
+  background-color: var(--color-killarney);
+  border-radius: 0.5rem;
+  border-bottom: 1px dashed var(--color-aths-special);
+}
+
+.airline p {
+  font-size: 0.9rem;
+  color: var(--color-aths-special);
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo img {
+  width: 1.1rem;
+}
+
+.ticket-top {
+  padding: 0.7rem;
+  background-color: var(--color-keppel);
+  border-bottom: 1px dashed var(--color-aths-special);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Judson', serif;
+  color: var(--color-aths-special);
+  text-align: center;
+}
+
+.ticket {
+  padding: 0.7rem;
+  background-color: var(--color-aths-special);
+  border: 2px solid var(--color-aths-special);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.hint {
+  font-size: 0.8rem;
+}
+
+.error {
+  width: 100%;
+  min-height: 1.5rem;
+  margin: 0.5rem 0 0.25rem;
+  background-color: var(--color-lavenderblush);
+  border: 1px solid var(--color-crimson);
+  border-radius: 0.15rem;
+}
+
+.error-text {
+  padding: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.react-select-container {
+  position: relative;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.react-select {
+  position: absolute;
+}
+
+.indicator-container {
+  position: absolute;
+  top: 25%;
+  right: 0.5rem;
+  z-index: 5;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.7rem;
+  background-color: var(--color-keppel);
+  border-radius: 0.5rem;
+}
+
+.user p {
+  width: 100%;
+  margin: 0;
+  padding: 0.25rem 0;
+  text-transform: uppercase;
+}
+
+.plane img {
+  width: 5rem;
+}
+
+#plane {
+  position: relative;
+  animation: linear infinite;
+  animation-name: plane;
+  animation-duration: 7s;
+}  
+
+.qr {
+  width: 20%;
+}
+
+.country {
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--color-grey);
+}
+
+@keyframes plane {
+  0% { left: 0; }
+  100% { left: 55%; }
+}
+
+@media (max-width: 1000px) {
+  .plane img { width: 3.75rem; }
+
+  @keyframes plane {
+    0% { left: 0; }
+    100% { left: 55%; }
+  }
+}
+
+@media (max-width: 400px) {
+  .plane img { width: 2.75rem; }
+}

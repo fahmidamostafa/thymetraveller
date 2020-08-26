@@ -1,0 +1,257 @@
+:root {
+  /* var(--color-black) */
+  --color-black: #000;
+  --color-cod-grey: #0F0F0F;
+
+  /* grey */
+  --color-grey: #808080;
+  --color-pewter: #92A29C;
+  --color-pumice: #BAC1BA;
+
+  /* white */
+  --color-white: #FFF;
+  --color-aths-special: #E9ECCA;
+
+  /* red */
+  --color-crimson: #DC143C;
+  --color-gallery: #EAEAEA;
+  --color-lavenderblush: #FFF0F5;
+
+  /* green */
+  --color-cyprus: #013243;
+  --color-killarney: #30603B;
+  --color-keppel: #43AC9F;
+  --color-turquoise: #40E0D0;
+  --color-honeydew: #F0FFF0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html {
+  font-size: 125%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Judson', serif;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.App {
+  position: relative;
+  min-height: calc(100vh - 2px);
+  padding: 1px;
+  background: linear-gradient(
+    0deg,
+    rgba(67,172,159,0.7),
+    rgba(67,172,159, 0.4)), url(assets/map.jpg) center fixed;
+  background-size: cover;
+}
+
+.window {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 10px solid var(--color-aths-special);
+  overflow-y: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: calc(100vh - 7.5rem);
+  margin-top: 6.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.modal {
+  position: relative;
+  min-width: 12.5rem;
+  margin: 0 1rem;
+  padding: 2.5rem 2.5rem 1.25rem;
+  background-color: var(--color-aths-special);
+  border-radius: 0.25rem;
+}
+
+.close-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.result {
+  width: 100%;
+  height: 80%;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  background-color: var(--color-keppel);
+  border: 2px solid var(--color-killarney);
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+.result > p {
+  font-size: 1.1rem;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+.result .inner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: var(--color-aths-special);
+  border-radius: 0.25rem;
+}
+
+.result .img-container {
+  width: 50%;
+  min-width: 50%;
+  height: 17.5rem;
+  background-color: var(--color-killarney);;
+}
+
+.result .img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+.result .text-outer-container {
+  width: 50%;
+  margin-left: 1.5rem;
+  text-align: center;
+}
+
+.result .address {
+  font-weight: 700;
+}
+
+.result table { 
+  width: 90%;
+  margin: 1.5rem auto;
+}
+
+.result tr {
+  width: 100%;
+}
+
+.result td {
+  width: 50%;
+  padding-top: 0.5rem;
+}
+
+.result .label {
+  font-weight: 700;
+  text-align: left;
+}
+
+.result .value {
+  text-align: right;
+}
+
+.cuisine-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding-right: 1rem;
+  list-style: disc;
+  direction: rtl;
+}
+
+.cuisine-list.item-count-one {
+  padding-right: 0;
+  list-style: none;
+}
+
+.result-cta-button {
+  width: 100%;
+  padding: 0.25rem;
+  background-color: var(--color-killarney);
+  border: none;
+  color: var(--color-aths-special);
+  transition: 0.5s all ease;
+}
+
+.result-cta-button:hover,
+.result-cta-button:focus {
+  color: var(--color-aths-special);
+  background-color: var(--color-keppel);
+}
+
+@media only screen and (max-width: 900px) {
+  .passport-body .result .inner-container {
+    flex-direction: column;
+  }
+  .passport-body .result .img-container {
+    width: 100%;
+    height: 10rem;
+  }
+  .passport-body .result .text-outer-container {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .search-results .result .inner-container {
+    flex-direction: column;
+  }
+  .search-results .result .img-container {
+    width: 100%;
+    height: 10rem;
+  }
+  .search-results .result .text-outer-container {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .passport-body .result {
+    padding: 0.25rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .window {
+    border: none;
+  }
+}

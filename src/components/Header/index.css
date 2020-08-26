@@ -1,0 +1,138 @@
+header {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 3.5rem);
+  padding: 1.5rem 1.25rem;
+  background-color: var(--color-aths-special);
+  color: var(--color-keppel);
+  text-align: left;
+  z-index: 99;
+}
+
+header a {
+  display: flex;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: var(--color-keppel);
+}
+
+header img {
+  display: inline-block;
+  width: 3.5rem;
+}
+
+.post-notification {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 12.5rem;
+  padding: 1rem;
+  background-color: var(--color-honeydew);
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--color-black);
+  z-index: 999;
+  animation-name: fadeInDown 0.5s;
+  -webkit-animation: fadeInDown 0.5s; /* Safari 4+ */
+  -moz-animation:    fadeInDown 0.5s; /* Fx 5+ */
+  -o-animation:      fadeInDown 0.5s; /* Opera 12+ */
+}
+
+.post-notification .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 0.75rem;
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+.post-notification .close-button:hover,
+.post-notification .close-button:active {
+  background-color: transparent;
+  color: var(--color-black);
+}
+
+.skip-link {
+  position: absolute;
+  left: -50rem;
+  top: 0.25rem;
+  padding: 0.5rem;
+  background-color: var(--color-white);
+  font-size: 1rem;
+  color: var(--color-var(--color-black));
+  z-index: 5;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+    transform: translateY(-5rem);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+    transform: translateY(-5rem);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header img {
+    width: 2.5rem;
+    padding-top: 0.25rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header img {
+    width: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header img {
+    width: 1.75rem;
+    padding-top: 0;
+  }
+  header {
+    width: 100%;
+  }
+}

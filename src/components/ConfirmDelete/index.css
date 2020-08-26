@@ -1,0 +1,10 @@
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+}
+
+.button-container button {
+  width: calc(50% - 0.5rem);
+}

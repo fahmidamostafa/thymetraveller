@@ -1,0 +1,49 @@
+.passport-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+}
+
+.passport {
+  position: relative;
+  width: 15rem;
+  max-width: 15rem;
+  height: 20rem;
+  margin: 1rem;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.passport img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.passport .inner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.passport .inner-container h2 {
+  position: absolute;
+  top: 1.25rem;
+  width: 100%;
+  color: var(--color-aths-special);
+  text-align: center;
+}
+
+.form-container {
+  position: absolute;
+  bottom: 0.7rem;
+  padding: 0 0.65rem;
+}
+
+.form-container button {
+  margin: 0 0 1.2rem;
+  border-radius: 0.25rem;
+  text-transform: none;
+}

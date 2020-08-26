@@ -1,0 +1,243 @@
+.search-results {
+  margin-top: -3rem;
+}
+
+.search-results.no-results-found {
+  margin: 1.5rem 0;
+}
+
+.wrapper {
+  max-width: 25rem;
+  margin: 3rem auto 0;
+  padding: 1px 0;
+  background-color: var(--color-killarney);
+  border-radius: 0.5rem;
+}
+
+.sort-and-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sort-and-filter button {
+  margin: 0;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--color-aths-special);
+  border: 1px solid var(--color-black);
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--color-black);
+  text-transform: uppercase;
+  z-index: 0;
+}
+
+.dropdown:hover {
+  background-color: var(--color-turquoise);
+}
+
+.dropdown:hover .sort,
+.dropdown:hover .filter {
+  display: block;
+}
+
+.dropdown button {
+  width: 100%;
+  padding: 0.3rem 1.1rem 0.5rem 1.1rem;
+  border: 1px solid var(--color-black);
+  font-size: 0.75rem;
+  text-align: left;
+  text-transform: lowercase;
+  transition: 0.4s all ease;
+}
+
+.dropdown button:hover {
+  background-color: var(--color-turquoise);
+  color: var(--color-black);
+}
+
+.sort, .filter {
+  display: none;
+  position: absolute;
+  top: 2.25rem;
+  left: 0;
+  right: 0;
+  padding: 0.7rem 0;
+}
+
+.sort button,
+.filter button {
+  background-color: var(--color-killarney);
+  border-radius: 0;
+  color: var(--color-aths-special);
+  cursor: pointer;
+}
+
+.search-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  color: var(--color-aths-special);
+  text-align: center;
+}
+
+.spacer {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.arrow-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.arrow-button.down {
+  right: 0;
+  top: 0;
+}
+
+.arrow-button.up {
+  position: absolute;
+  right: 0;
+}
+
+.arrow-button:hover,
+.arrow-button:focus {
+  background-color: transparent;
+}
+
+.arrow-button.down:hover {
+  transform: translateY(-0.5rem);
+  animation:         arrow-down 1s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: arrow-down 1s infinite; /* Safari 4+ */
+  -moz-animation:    arrow-down 1s infinite; /* Fx 5+ */
+  -o-animation:      arrow-down 1s infinite; /* Opera 12+ */
+}
+
+.arrow-button:hover {
+  transform: translateY(0);
+  animation:         arrow-up 1s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: arrow-up 1s infinite; /* Safari 4+ */
+  -moz-animation:    arrow-up 1s infinite; /* Fx 5+ */
+  -o-animation:      arrow-up 1s infinite; /* Opera 12+ */
+}
+
+.cta-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 8.25rem;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+}
+
+.pagination li {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0 0.5rem;
+}
+
+.pagination .page-button {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+
+.pagination .page-button:disabled {
+  background-color: var(--color-keppel);
+  cursor: default;
+}
+
+@keyframes arrow-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+    transform: translateY(0.5rem);
+    -webkit-transform: translateY(0.5rem);
+    -moz-transform: translateY(0.5rem);
+    -o-transform: translateY(0.5rem);
+  }
+}
+
+@keyframes arrow-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+    transform: translateY(-1rem);
+    -webkit-transform: translateY(-1rem);
+    -moz-transform: translateY(-1rem);
+    -o-transform: translateY(-1rem);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .dropdown,
+  .dropdown button {
+    font-size: 0.65rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .search-title h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .pagination li {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .pagination .page-button {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .dropdown {
+    padding: 0.65rem 0;
+  }
+  .sort, .filter {
+    top: 1.5rem;
+  }
+  .search-title h2 {
+    font-size: 1.5rem;
+  }
+}

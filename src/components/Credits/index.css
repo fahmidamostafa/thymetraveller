@@ -1,0 +1,30 @@
+.credits {
+  width: calc(100% - 10rem);
+  margin: 3rem auto 0;
+  color: var(--color-aths-special);
+  box-sizing: border-box;
+}
+
+.credits a {
+  color: var(--color-keppel);
+}
+
+.credits ul {
+  list-style: disc;
+}
+
+.credits li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 650px) {
+  .credits {
+    width: calc(100% - 7rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .credits {
+    width: calc(100% - 6rem);
+  }
+}

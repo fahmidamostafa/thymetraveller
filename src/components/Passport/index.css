@@ -1,0 +1,28 @@
+.passport-body {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+	width: 90%;
+	height: 85%;
+	background-color: var(--color-aths-special);
+	color: var(--color-cyprus);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.passport-body .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2.5rem;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+  .passport-body .details {
+    padding: 2.5rem 1.25rem;
+  }
+}
