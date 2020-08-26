@@ -20,7 +20,7 @@ const Nav = (props) => (
     <div className="social-container">
       <ul className="social-links">
         <li key="code">
-          <a href="https://github.com/fahmidamostafa/Thyme-Traveller">
+          <a href="https://github.com/fahmidamostafa/thymetraveller">
             <i className="fas fa-code" />
           </a>
         </li>
