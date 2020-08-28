@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactSelect from 'react-select';
 import Button from '../Button';
 import Option from './Option';
@@ -11,6 +11,11 @@ import './index.css';
 
 const SearchBar = (props) => {
   const [isInputInvalid, setIsInputInvalid] = useState(null);
+  const [searchSelection, setSearchSelection] = useState(null);
+
+  useEffect(() => {
+    setSearchSelection(props.searchSelection);
+  }, [props.searchSelection]);
 
   const selectStyles = {
     dropdownIndicator: () => ({ display: 'none' }),
@@ -62,12 +67,12 @@ const SearchBar = (props) => {
   }
 
   const handleOnBlur = () => {
-    if (!props.searchSelection && props.cityInput && props.cityInput.length > 2) {
+    if (!searchSelection && props.cityInput && props.cityInput.length > 2) {
       setIsInputInvalid(true);
       props.setErrorMessage('Please enter a valid location and make a selection in order to proceed.');  
       return;
     }
-    if (props.searchSelection) {
+    if (searchSelection) {
       setIsInputInvalid(false);
       props.setErrorMessage(null);
       return;
@@ -103,7 +108,8 @@ const SearchBar = (props) => {
           <div className="react-select-container">
             <ReactSelect
               placeholder=""
-              styles={selectStyles}          
+              styles={selectStyles}
+              blurInputOnSelect={false}
               inputValue={props.cityInput || ''}
               value={props.cityInput}
               options={props.citySuggestions || []}
@@ -121,7 +127,7 @@ const SearchBar = (props) => {
         </div>
         <Button
           onClick={props.onSubmitCitySearch}
-          disabled={!props.searchSelection}>
+          disabled={!searchSelection}>
           Search Cities
         </Button>
         <p>Enter your destination to begin your journey to foreign cuisines! Save your favourite restaurants no matter where you are in North America.</p>
